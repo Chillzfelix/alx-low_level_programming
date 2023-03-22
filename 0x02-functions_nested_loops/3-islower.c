@@ -2,6 +2,8 @@
 
 /**
  * _islower - returns a value based on c
+ * @c: character stored in c to check if its lowercase or not
+ *
  *
  * Return: 1 if c is lowercase and 0 if c is otherwise
  */
