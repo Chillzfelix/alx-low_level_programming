@@ -1,38 +1,45 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
-
 /**
- * times_table - has returns nothing
- *
- * Description: Print 9 times table
- *
- * Return: Returns notion
- */
+* times_table - prints lowercase characters
+*/
 void times_table(void)
 {
-int i = 0;
-_putchar('0');
-_putchar(' ');
-_putchar('x');
-_putchar(' ');
-_putchar('9');
-_putchar(' ');
-_putchar('=');
-_putchar(' ');
-_putchar('0');
-_putchar('\n');
-i++;
-while (i <= 10)
+int i, j, product;
+for (i = 0; i <= 9; i++)
 {
-_putchar(i + '0');
+for (j = 0; j <= 9; j++)
+{
+product = i * j;
+if (product < 10 && product != 0)
+{
 _putchar(' ');
-_putchar('x');
+_putchar(product + '0');
+}
+else if (j == 0)
+{
+_putchar(product + '0');
+}
+else if (i == 0)
+{
 _putchar(' ');
-_putchar('9');
+_putchar(product + '0');
+}
+else
+{
+_putchar(product / 10 + '0');
+_putchar(product % 10 + '0');
+}
+if (j < 9)
+{
+_putchar(',');
 _putchar(' ');
-_putchar('=');
-_putchar(' ');
-_putchar(i * 9 + '0');
+}
+else
+{
 _putchar('\n');
-i++;
+}
+}
 }
 }
