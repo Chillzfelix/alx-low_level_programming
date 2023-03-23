@@ -1,25 +1,20 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
-
 /**
- * print_last_digit - return integer and takes integer as an argument
- *
- * @n: Get the last digit of integer n
- *
- * Description: Print the last digit of n
- *
- * Return: Character of last digit of n and return last digit of n
- */
-int print_last_digit(int n)
+* print_last_digit - prints lowercase characters
+*
+* @num: integer parameter
+*
+* Return: Always 0 or 1
+*/
+int print_last_digit(int num)
 {
-int last_digit = n % 10;
+int last_digit = num % 10;
 if (last_digit < 0)
 {
-_putchar(last_digit + '0');
-return (last_digit);
+last_digit = -last_digit;
 }
-else
-{
-_putchar(last_digit + '0');
+_putchar('0' + last_digit);
 return (last_digit);
-}
 }
