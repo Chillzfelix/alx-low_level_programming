@@ -1,9 +1,8 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
 /**
 * print_to_98 - prints lowercase characters
-*
-* print_number - prints i number
 *
 * @n: integer parameter
 */
@@ -31,7 +30,11 @@ putchar(' ');
 print_number(98);
 putchar('\n');
 }
-print_number(int n)
+/**
+* print_number - prints i number
+* @n: integer parameter
+*/
+void print_number(int n)
 {
 if (n < 0)
 {
