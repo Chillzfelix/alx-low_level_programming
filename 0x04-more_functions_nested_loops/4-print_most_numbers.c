@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_most_numbers - prints from 0 to 9 without 2 and 4
- *
- * Return: Void
- */
+* print_most_numbers - prints from 0 to 9 without 2 and 4
+*
+* Return: Void
+*/
 void print_most_numbers(void)
 {
 int c;
