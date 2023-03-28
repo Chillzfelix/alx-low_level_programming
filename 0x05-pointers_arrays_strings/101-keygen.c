@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "main.h"
-#define PASSWORD_LENGTH 10
+:x#define PASSWORD_LENGTH 10
 
 /**
 * generate_random_char - generates a random character between '!' and '~' in the ASCII table
