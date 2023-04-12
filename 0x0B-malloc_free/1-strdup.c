@@ -19,7 +19,6 @@ return (NULL);
 i = 0;
 {
 while (str[i] != '\0')
-}
 i++;
 aaa = malloc(sizeof(char) * (i + 1));
 {
