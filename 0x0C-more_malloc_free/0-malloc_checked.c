@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stddef.h>
+
 /**
- * *malloc _checked - allocates memory using malloc
- * @b: number of bytes to allocate
- *
- * Return: a pointer to the allocated memory
+ * malloc_checked - dynamically allocates memory
+ * @b: The number of bytes
+ * Return: A pointer
  */
-void *malloc_checked(unsigned int b);
+void *malloc_checked(unsigned int b)
 {
 void *ptr = malloc(b);
 if (ptr == NULL)
