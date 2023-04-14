@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * *string_nconcat - concentrates n bytes of a string to another string
  * @s1: string to append to
@@ -34,4 +34,12 @@ while (i < len1)
 {
 s[a] = s1[a];
 a++;
-
+}
+{
+strncpy(result, s1, len1);
+strncpy(result + len1, s2, n);
+result[len1 + n] = '\0';
+{
+return (result);
+}
+}
