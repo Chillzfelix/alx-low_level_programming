@@ -1,7 +1,8 @@
+#!/bin/bash
 #include "main.h"
 
 /**
- * *_strcat - function that contains two strings
+ * _strcat - function that contains two strings
  * @dest: entered value
  * @src: entered value
  *
