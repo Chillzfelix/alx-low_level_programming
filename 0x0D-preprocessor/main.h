@@ -1,9 +1,14 @@
-#ifndef main_h
-#define main_h
-#ifndef TEST_H_INCLUDED
-#define TEST_H_INCLUDED
-
-void test(void);
-int _putchar(char c);
+#ifndef main.h
+#define main.h
+#ifndef object_like_macro.h
+#define object_like_macro.h
+#ifndef pi.h
+#define pi.h
+#ifndef main.c
+#define main.c
+#ifndef function_like_macro.h
+#define function_like_macro.h
+#ifndef sum.h
+#define sum.h
 
 #endif
