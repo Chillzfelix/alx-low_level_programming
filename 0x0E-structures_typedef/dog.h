@@ -2,23 +2,20 @@
 #define DOG_H
 
 /**
-* struct dog - new information for struct dog
+* struct dog - new struct for dog
 *
-* @name: struct dog named dog_t
+* @name: dog's name
 *
-* @age: age of dog
+* @age: dog's age
 *
-* @owner: owner of dog
+* @owner: dog's owner
 **/
 
 struct dog
 {
-char *name[dog_t];
+char *name;
 float age;
 char *owner;
 };
-
-void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
 
 #endif
