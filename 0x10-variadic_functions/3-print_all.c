@@ -8,36 +8,36 @@
  */
 void print_all(const char * const format, ...)
 {
-int x, b, u = 0;
-float f;
-char c;
-va_list xb;
-va_start(xb, format);
-while (format[u] != '\0')
+int v, m, c = 0;
+float d;
+char p;
+va_list vm;
+va_start(vm, format);
+while (format[c] != '\0')
 {
-switch (format[u])
+switch (format[c])
 {
-case 'x':
-x = va_arg(xb, int);
-printf("%c", (char) x);
+case 'v':
+v = va_arg(vm, int);
+printf("%c", (char) v);
 break;
-case 'b':
-b = va_arg(xb, int);
-printf("%d", b);
+case 'm':
+m = va_arg(vm, int);
+printf("%d", m);
 break;
-case 'f':
-f = (float) va_arg(xb, double);
-printf("%f", f);
+case 'd':
+d = (float) va_arg(vm, double);
+printf("%f", d);
 break;
-case 'c':
-c = va_arg(xb, int);
-if (c == '\0')
+case 'p':
+p = va_arg(vm, int);
+if (p == '\0')
 {
 printf("(nil)");
 }
 else
 {
-printf("%s", &c);
+printf("%s", &p);
 }
 break;
 default:
@@ -46,5 +46,5 @@ break;
 c++;
 }
 printf("\n");
-va_end(xb);
+va_end(vm);
 }
