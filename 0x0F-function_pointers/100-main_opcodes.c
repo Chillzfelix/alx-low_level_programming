@@ -27,5 +27,9 @@ if (h == bytes - 1)
 printf("%02hhx\n", arr[h]);
 break;
 }
-}}
+printf("%02hhx\n", arr[h]);
+}
+{
+return (0);
+}
 }
