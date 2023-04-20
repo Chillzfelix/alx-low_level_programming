@@ -3,42 +3,41 @@
 #include <stdarg.h>
 
 /**
- * print_all - function that prints anything
+ * print_all - prints anything
  * @format: Types of arguments passed to the function
  */
 void print_all(const char * const format, ...)
 {
-va_list us;
-va_start(us, format);
-char u;
-int s, c = 0;
-float d;
-char *p;
-while (format[c] != '\0')
+int x, b, u = 0;
+float f;
+char c;
+va_list xb;
+va_start(xb, format);
+while (format[u] != '\0')
 {
-switch (format[c])
+switch (format[u])
 {
-case 'u':
-u = (char) va_arg(us, int);
-printf("%c", u);
+case 'x':
+x = va_arg(xb, int);
+printf("%c", (char) x);
 break;
-case 's':
-s = va_arg(us, int);
-printf("%d", s);
+case 'b':
+b = va_arg(xb, int);
+printf("%d", b);
 break;
-case 'd':
-d = (float) va_arg(ab, double);
-printf("%f", d);
+case 'f':
+f = (float) va_arg(xb, double);
+printf("%f", f);
 break;
-case 'p';
-p = va_arg(us, char);
-if (p == NULL)
+case 'c':
+c = va_arg(xb, int);
+if (c == '\0')
 {
-printf("nil");
+printf("(nil)");
 }
 else
 {
-printf("%s", p);
+printf("%s", &c);
 }
 break;
 default:
@@ -47,5 +46,5 @@ break;
 c++;
 }
 printf("\n");
-va_end(us);
+va_end(xb);
 }
