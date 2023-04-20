@@ -2,7 +2,7 @@
 #define DOG_H
 
 /**
-* struct dog - new struct for dog
+* struct_dog - new struct for dog
 *
 * @name: dog's name
 *
@@ -13,9 +13,11 @@
 
 struct dog
 {
-char *name;
+pchar *name;
 float age;
 char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner)
 
 #endif
