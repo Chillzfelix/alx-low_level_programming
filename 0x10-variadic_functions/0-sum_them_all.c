@@ -10,15 +10,14 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-va_list ab;
-unsigned int h, add = 0;
-va_start(ab, n);
-for (h = 0; h < n; h++)
+va_list me;
+unsigned int a, add = 0;
+va_start(me, n);
+for (a = 0; a < n; a++)
 {
-add += va_arg(ab, int);
+add += va_arg(me, int);
 }
-va_end(ab);
+va_end(me);
 {
 return (add);
-}
-}
+}}
