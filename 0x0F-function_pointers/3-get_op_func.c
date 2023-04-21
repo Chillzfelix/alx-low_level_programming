@@ -1,5 +1,5 @@
 #include "3-calc.h"
-#include <stddef.h>
+#include <stdlib.h>
 
 /**
  * get_op_func - selects a function to perform operation
@@ -17,14 +17,14 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
-int i = 0;
-while (ops[i].op != NULL)
+int g = 0;
+while (ops[g].op != NULL)
 {
-if (*(ops[i].op) == *s && *(s + 1) != '\0')
+if (*(ops[g].op) == *s && *(s + 1) != '\0')
 {
-return (ops[i].f);
+return (ops[g].f);
 }
-i++;
+g++;
 }
 return (NULL);
 }
