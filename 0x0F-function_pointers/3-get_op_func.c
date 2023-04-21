@@ -1,4 +1,3 @@
-#include "function_pointers.h"
 #include "3-calc.h"
 #include <stddef.h>
 
@@ -23,7 +22,7 @@ while (ops[i].op != NULL)
 {
 if (*(ops[i].op) == *s && *(s + 1) != '\0')
 {
-return (ops[i].g);
+return (ops[i].f);
 }
 i++;
 }
