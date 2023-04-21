@@ -5,46 +5,44 @@
 /**
  * print_all - prints anything
  * @format: Types of arguments passed to the function
+ * Description: This prints anything of any type
  */
 void print_all(const char * const format, ...)
 {
-int v, m, c = 0;
-float d;
-char p;
-va_list vm;
-va_start(vm, format);
-while (format[c] != '\0')
+int g = 0;
+char *ptr, *sep = "";
+va_list us;
+va_start(us, format);
+if (format)
 {
-switch (format[c])
+while (format[g])
 {
-case 'v':
-v = va_arg(vm, int);
-printf("%c", (char) v);
-break;
-case 'm':
-m = va_arg(vm, int);
-printf("%d", m);
-break;
-case 'd':
-d = (float) va_arg(vm, double);
-printf("%f", d);
-break;
-case 'p':
-p = va_arg(vm, int);
-if (p == '\0')
+switch (format[g])
 {
-printf("(nil)");
+case 'c':
+printf("%s%c", sep, va_arg(us, int));
+break;
+case 'g':
+printf("%s%g", sep, va_arg(us, int));
+break;
+case 'f':
+printf("%s%f", sep, va_arg(us, double));
+break;
+case 's':
+ptr = va_arg(us, char *);
+if (!ptr)
+{
+ptr = "(nil)";
 }
-else
-{
-printf("%s", &p);
-}
+printf("%s%s", sep, ptr);
 break;
 default:
-break;
+g++;
+continue;
 }
-c++;
+sep = ", ";
+g++;
+}
 }
 printf("\n");
-va_end(vm);
 }
