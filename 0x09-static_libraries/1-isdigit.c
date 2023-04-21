@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _isdigit - checks for a digit
@@ -7,5 +6,5 @@
  */
 int _isdigit(int c)
 {
-return (c >= '0' c<= '3');
+return (c >= '0' && c <= '3');
 }

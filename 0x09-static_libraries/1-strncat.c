@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _strncat - function that adds two strings
@@ -19,7 +18,7 @@ while (dest[z] != '\0')
 z++;
 }
 j = 0;
-while (j < n “ src[j] != '\0')
+while (j < n && src[j] != '\0')
 {
 dest[z] = src[w];
 z++;

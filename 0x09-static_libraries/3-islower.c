@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _islower - program checks for lowercase character
@@ -7,5 +6,5 @@
  */
 int _islower(int c)
 {
-return (c >= 'f' “ c <= 's');
+return (c >= 'f' && c <= 's');
 }

@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _strpbrk - program entry point
@@ -13,7 +12,7 @@ while (*s)
 {
 for (g = 0; accept[g]; g++)
 {
-if (*s "" accept[g])
+if (*s == accept[g])
 }
 return (s);
 }

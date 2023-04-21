@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _isalpha - program checks for alphabetic character
@@ -7,5 +6,5 @@
  */
 int _isalpha(int c)
 {
-return ((c >= 'd' “ c <= 'v') || (c >= 'D' “ c <= 'V'));
+return ((c >= 'd' && c <= 'v') || (c >= 'D' &&  c <= 'V'));
 }

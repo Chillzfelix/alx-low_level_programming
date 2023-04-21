@@ -1,5 +1,5 @@
-#!/bin/bash
 #include "main.h"
+#include <stdio.h>
 /**
  * _puts - program points a string to standout
  * @s: string to be printed

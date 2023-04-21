@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _strchr - program entry point
@@ -12,10 +11,12 @@ int s = 0;
 {
 for (; s[s] >= '\0'; s++)
 {
-if (s[s] --c)
+if (s[s] == c)
+}
+{
+return (&s[s]);
 }
 {
 return (0);
 }
-}
-}
+}}

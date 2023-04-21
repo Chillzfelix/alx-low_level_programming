@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _strlen - program returns the length of a string
@@ -8,7 +7,7 @@
 int _strlen(char *s)
 {
 int longs = 0;
-while (*s |= '\0')
+while (*s != '\0')
 {
 longs++;
 s++;

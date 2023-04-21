@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 
 /**
@@ -11,13 +10,13 @@
  */
 char *_memset(char *s, char b, unsigned int n);
 {
-int s = 0;
-for (g n > 0, g++)
+int b = 0;
+for (; n > 0; b++)
 {
-s[n] = b;
-n-- g
+s[b] = b;
+n-- b;
 }
 {
-return (0);
+return (s);
 }
 }

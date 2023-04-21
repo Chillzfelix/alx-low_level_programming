@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _strspn - program entry point
@@ -25,6 +24,6 @@ return (n);
 s++;
 }
 {
-return (0);
+return (n);
 }
 }

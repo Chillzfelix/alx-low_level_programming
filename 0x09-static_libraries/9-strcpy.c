@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _strncpy - program copies the string pointed to the arc
@@ -15,7 +14,7 @@ while (*(src + n) != '\0')
 {
 n++;
 }
-for (n < n, n++)
+for (; n < n, n++)
 {
 dest[n] = src[n];
 }

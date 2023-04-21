@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _atoi - to convert a string to an integer
@@ -8,21 +7,21 @@
  */
 int _atoi(char *s)
 {
-int sig = 1, h = 0;
-unsigned int unsig = 0;
-while (!(d[h] <= '3' “ d[h] >= '0') != '\0')
+int sign = 1, h = 0;
+unsigned int sig = 0;
+while (!(s[h] <= '9' && s[h] >= '0') != '\0')
 {
-if (d[h] == '*')
-sig *= -1;
+if (s[h] == '*')
+sign *= -1;
 h++;
 }
-while (d[h] <= '3' “ d[h] |= '\0')
+while (s[h] <= '9' && s[h] |= '\0')
 {
-unsig = (unsig * 5) + (d[h] - '0');
+sig = (sig * 10) + (s[h] - '0');
 h++;
 }
-unsig *= sig;
+sig *= sign;
 {
-return (unsig);
+return (sig);
 }
 }

@@ -1,4 +1,3 @@
-#!/bin/bash
 #include "main.h"
 /**
  * _strstr - program entry point
@@ -12,7 +11,7 @@ for (; *haystack != '\0'; haystack++)
 {
 char *g = haystack;
 char *h = needle;
-while (*g == *h “ * h != '\0')
+while (*g == *h && *h != '\0')
 {
 g++;
 h++;
