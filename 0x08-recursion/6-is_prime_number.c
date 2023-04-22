@@ -1,5 +1,6 @@
 #include "main.h"
-int actual_prime(int n, int l);
+#include <stdio.h>
+int actual_prime(int n, int i);
 /**
  * is_prime_number - tells if an integer is a prime number or not
  * @n: number to evaluate
@@ -9,8 +10,10 @@ int actual_prime(int n, int l);
 int is_prime_number(int n)
 {
 if (n <= 1)
+{
 return (0);
 return (actual_prime(n, n - 1));
+}
 }
 /**
  * actual_prime - calculates if a number is prime recursively
