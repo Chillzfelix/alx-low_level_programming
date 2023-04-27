@@ -4,8 +4,8 @@
 
 /**
  * add_node_end - adds node to the end of a linked list
- * @head: pointer that points the head of the list
- * @str: new string to add in the node
+ * @head: pointer to the head of the list
+ * @str: string added to the new list
  *
  * Return: Address of new element
  */
