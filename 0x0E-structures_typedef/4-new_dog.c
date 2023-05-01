@@ -1,53 +1,77 @@
 #include <stdlib.h>
 #include "dog.h"
-#include "main.h"
-
 /**
- * new_dog - creates a new dog
- * @name: name of the new dog
- * @age: age of the new dog
- * @owner: owner of the new dog
+ * _strlen - returns the string's length
+ * @s: string to evaluate
  *
- * Return: pointer to the new dog, or NULL if malloc fails
+ * Return: the length of the string
+ */
+int _strlen(char *s)
+{
+int c;
+c = 0;
+while (s[c] != '\0')
+{
+c++;
+}
+return (c);
+}
+/**
+ * _strcpy - copies the string pointed to by src
+ * including the terminating null byte (\0)
+ * to a buffer pointed to by dest.
+ * @dest: pointer to the buffer in which to copy the string
+ * @src: string to be copied
+ *
+ * Return: The pointer to dest.
+ */
+char *_strcpy(char *dest, char *src)
+{
+int len, c;
+len = 0;
+while (src[len] != '\0')
+{
+len++;
+}
+for (c = 0; c < len; c++)
+{
+dest[c] = src[c];
+}
+dest[c] = '\0';
+return (dest);
+}
+/**
+ * new_dog - creates a new dog.
+ * @name: name of the new dog.
+ * @age: age of the new dog.
+ * @owner: owner of the new dog.
+ *
+ * Return: pointer to the new dog (Success), NULL otherwise
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *new_dog;
-char *new_name, *new_owner;
-int len_name, len_owner;
-new_dog = malloc(sizeof(dog_t));
-if (new_dog == NULL)
+dog_t *dog;
+int len1, len2;
+len1 = _strlen(name);
+len2 = _strlen(owner);
+dog = malloc(sizeof(dog_t));
+if (dog == NULL)
+return (NULL);
+dog->name = malloc(sizeof(char) * (len1 + 1));
+if (dog->name == NULL)
 {
+free(dog);
 return (NULL);
 }
-for (name_len = 0; name[name_len]; name_len++)
-;
-for (owner_len = 0; owner[owner_len]; owner_len++)
-;
-new_name = malloc(name_len + 1);
-if (new_name == NULL)
+dog->owner = malloc(sizeof(char) * (len2 + 1));
+if (dog->owner == NULL)
 {
-free(new_dog);
+free(dog);
+free(dog->name);
 return (NULL);
 }
-new_owner = malloc(len_owner + 1);
-if (new_owner == NULL)
-{
-free(new_name);
-free(new_dog);
-return (NULL);
-}
-for (int j = 0; j <= len_name; j++)
-{
-new_name[j] = name[j];
-}
-for (int j = 0; j <= len_owner; j++)
-{
-new_owner[j] = owner[j];
-}
-new_dog->name = new_name;
-new_dog->age = age;
-new_dog->owner = new_owner;
-{
-return (new_dog);
+_strcpy(dog->name, name);
+_strcpy(dog->owner, owner);
+dog->age = age;
+return (dog);
 }
