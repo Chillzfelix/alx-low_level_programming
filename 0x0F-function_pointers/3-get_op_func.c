@@ -21,5 +21,5 @@ op_t ops[] = {
 int i = 0;
 while (ops[i].op != NULL && *(ops[i].op) != *s)
 i++;
-return (ops[i].h);
+return (ops[i].f);
 }
