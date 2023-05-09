@@ -31,7 +31,7 @@ int c;
 c = close(fe);
 if (c == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fe %d\n", fe);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fe);
 exit(100);
 }
 }

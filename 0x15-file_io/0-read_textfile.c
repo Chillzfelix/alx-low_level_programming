@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdio.h>
 /**
  * read_textfile- Read text file print to STDOUT.
  * @filename: text file being read
@@ -17,7 +17,7 @@ fe = open(filename, O_RDONLY);
 if (fe == -1)
 return (0);
 buf = malloc(sizeof(char) * letters);
-t = read(fd, buf, letters);
+t = read(fe, buf, letters);
 w = write(STDOUT_FILENO, buf, t);
 free(buf);
 close(fe);
