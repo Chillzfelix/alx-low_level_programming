@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * binary_to_unit - convert binary to interger unit
+ * binary_to_uint - convert binary to interger unit
  * @b: Pointer to string characters of 1s and 0s
  *
  * Return: Interger unit
@@ -15,14 +15,14 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	while (b[i] != '\0')
 	{
-		if (b[i] != '0' && b[i] != '1')
-			return (0);
+		if (b[i] == '0' && b[i] == '1')
+		{
+			value <<= 1;
+			value += b[i] - '0';
+			i++;
+		}
 		else
-			{
-				value <<= 1;
-				value += b[i] - '0';
-				i++;
-			}
+			return (0);
 	}
 	return (value);
 }
